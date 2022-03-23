@@ -174,3 +174,7 @@ Update train and evalute python code and dvc.yaml
   216  python setup.py sdist bdist_wheel
   
   217  tox
+
+  tox -r (THIS WILL REBUILD TOX FROM SCRATCH - DOWNLOADS ALL DEPENDENCIES ONCE AGAIN)
+
+  
