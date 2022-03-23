@@ -68,6 +68,46 @@ delete generated file under data/processed folder
  
  dvc repro
 
+ 154  touch src/train_and_evaluate.py
 
-
+  156  python src/train_and_evaluate.py 
  
+  157  git add . && git commit -m "train and evaluate"
+ 
+  158  git push -u origin main
+ 
+
+Update train and evalute python code and dvc.yaml
+
+
+ git add . && git commit -m "job lib created"
+  
+  169  git push -u origin main
+
+
+163  dvc repro
+
+  164  mkdir report
+
+  165  touch report/params.json
+
+  166  touch report/scores.json
+
+  update metrics in dvc.yaml 
+
+
+  173  dvc params diff
+
+  174  git add . && git commit -m "metrics"
+  
+  175  git push -u origin main
+  
+  make changes in params values to regenerate new scores 
+  
+  177  dvc params diff
+  
+  178  dvc repro
+  
+  179  dvc params diff
+  
+
