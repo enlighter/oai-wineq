@@ -103,7 +103,7 @@ Update train and evalute python code and dvc.yaml
   175  git push -u origin main
   
   make changes in params values to regenerate new scores 
-  
+
   177  dvc params diff
   
   178  dvc repro
@@ -111,3 +111,66 @@ Update train and evalute python code and dvc.yaml
   179  dvc params diff
   
 
+
+181  git add . && git commit -m "metrics"
+  
+  182  git push -u origin main
+    
+    84  dvc metrics show
+  
+  185  dvc metrics diff
+  
+  186  git add . && git commit -m "metrics"
+  
+  187  git push -u origin main
+  
+  188  dvc metrics diff
+  
+  189  dvc repro
+  
+  190  dvc metrics diff
+  
+  191  dvc repro
+  
+  192  dvc metrics diff
+
+
+
+  TOX testing framework 
+
+   198  conda activate wineq
+   199  tox
+   
+   200  touch tox.ini
+   
+   201  pytest -v
+   
+   202  mkdir tests
+   
+   203  touch tests/conftest.py tests/test_config.py
+  
+  204  touch tests/__init__.py
+  
+  205  pytest -v
+  
+  206  pytest -v
+  
+  207  pytest -v
+  
+  208  tox
+
+210  git add . && git commit -m "tox testing"
+  
+  211  git push -u origin main
+  
+   212  tox
+  
+  213  touch setup.py
+  
+  214  pip install -e .
+  
+  215  pip freeze
+  
+  216  python setup.py sdist bdist_wheel
+  
+  217  tox
