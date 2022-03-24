@@ -1,3 +1,7 @@
+# LOCAL PACKAGE INSTALLATION
+-e .
+
+# THIRD PARTY PACKAGES
 dvc
 dvc[gdrive]
 sklearn
