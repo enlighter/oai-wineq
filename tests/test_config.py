@@ -22,7 +22,7 @@ class NotInRange(Exception):
 
 def test_generic1():
     a = 5
-    with pytest.raises(ValueError):
+    with pytest.raises(NotInRange):
         if a not in range(10, 20):
             raise NotInRange
         
