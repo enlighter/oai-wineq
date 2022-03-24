@@ -177,4 +177,55 @@ Update train and evalute python code and dvc.yaml
 
   tox -r (THIS WILL REBUILD TOX FROM SCRATCH - DOWNLOADS ALL DEPENDENCIES ONCE AGAIN)
 
+
+  pip install jupyterlab
+
+  jupyter-lab notebooks/
+
+  create notebook file and generate schema_in.json
+
+
+
+
+238  pytest -v
   
+  239  tox
+  
+  240  tox
+  
+  241  git add . && git commit -m "flake 8"
+  
+  242  git push -u origin main
+  
+  243  mkdir -p prediction_service/model
+  
+  244  mkdir webapp
+  
+  245  touch app.py
+  
+  246  touch prediction_service/__init__.py
+  
+  247  touch prediction_service/prediction.py
+  
+  248  mkdir -p webapp/static/css
+  
+  249  mkdir -p webapp/static/script
+  
+  250  touch webapp/static/css/main.css
+  
+  251  touch webapp/static/script/index.js
+  
+  252  touch webapp/templates
+  
+  253  touch webapp/templates/index.html
+  
+  254  mkdir webapp/templates
+  
+  255  mkdir webapp/templates
+  
+  256  touch webapp/templates/index.html
+  
+  257  touch webapp/templates/404.html
+  
+  258  touch webapp/templates/base.html
+
