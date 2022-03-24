@@ -1,4 +1,3 @@
-from pyexpat import model
 import yaml
 import os
 import json
@@ -11,14 +10,12 @@ schema_path = os.path.join("prediction_service", "schema_in.json")
 
 class NotInRange(Exception):
     def ___init__(self, message="Values entered are not in expected range"):
-        # self.input_ = input_
         self.message = message
         super().__init__(self.message)
 
 
 class NotInColumns(Exception):
     def ___init__(self, message="Not in Cols"):
-        # self.input_ = input_
         self.message = message
         super().__init__(self.message)
 
