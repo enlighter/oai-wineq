@@ -18,7 +18,8 @@ def index():
                 response = prediction.form_response(dict_req)
                 return render_template("index.html", response=response)
             elif request.json:
-                pass
+                response = prediction.api_response(request.json)
+                return jsonify(response)
         except Exception as e:
             print(e)
             error = {"error": "Something went wrong! Try again later!"}
